@@ -1,4 +1,5 @@
-import './App.css'; 
+import './App.css';
+import Navbar from './components/NavBar';
 
 
 function App() {
@@ -10,14 +11,10 @@ function App() {
   }
   return (
     <>
-
-      <h1> {nameStore} </h1>
-      <div className="card">
+      <Navbar />
+      <div className="saludo">
         <p>{saludarUsuario("Horacio")}</p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }

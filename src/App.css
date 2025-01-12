@@ -8,6 +8,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   font-family: 'Arial', sans-serif;
+  cursor: pointer;
 }
 
 nav h1 {
@@ -77,3 +78,40 @@ nav ul li a:hover {
   line-height: 1.5;
   margin: 0;
 }
+
+.item-count {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: mediumseagreen;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+
+.itemCount p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.item-count button {
+  background-color: darkorange;
+  color: black;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 0 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.item-count button:hover {
+  background-color: aquamarine;
+}
+
+

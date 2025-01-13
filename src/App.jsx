@@ -1,6 +1,7 @@
 import "./App.css";
 import Navbar from "./components/NavBar";
 import ItemCount from "./components/itemCount";
+import ItemListContainer from "./components/ItemListContainer";
 
 
 
@@ -8,8 +9,8 @@ import ItemCount from "./components/itemCount";
 function App() {
   const nameStore = "Salsamentaria Las Margaritas";
 
-  function saludarUsuario(nameUser) {
-    const saludo = `Bienvenido ${nameUser} a ${nameStore} tu tienda de confianza`;
+  function saludarUsuario() {
+    const saludo = `Bienvenido(a) a ${nameStore} tu tienda de confianza`;
     return saludo;
   }
 
@@ -17,8 +18,9 @@ function App() {
     <>
       <Navbar />
       <div className="saludo">
-        <p>{saludarUsuario("Horacio")}</p>
+        <p>{saludarUsuario()}</p>
       </div>
+      <ItemListContainer />
     <section>
     <ItemCount stock={10} initial={1} onAdd={undefined}/>
     </section>

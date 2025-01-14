@@ -11,7 +11,7 @@ function Item(props) {
                 <div>
                     <p className="card-price">{price}</p>
                 </div>
-                <Button>Agregar Al carrito</Button>
+                <Button>Ver Detalles</Button>
             </div>
         </div>
     );

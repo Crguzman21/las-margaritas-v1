@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./components/NavBar";
 import ItemCount from "./components/itemCount";
 import ItemListContainer from "./components/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 
 
 
@@ -23,6 +24,8 @@ function App() {
       <ItemListContainer />
     <section>
     <ItemCount stock={10} initial={1} onAdd={undefined}/>
+    <hr />
+    <ItemDetailContainer/>
     </section>
     </>
   )

@@ -1,7 +1,6 @@
-/* Estilo base para la tarjeta */
 .card {
     width: 300px;
-    border: 1px solid #ddd;
+    border: 1px solid black;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -9,6 +8,8 @@
     background-color: #fff;
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
@@ -16,59 +17,61 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Imagen de la tarjeta */
 .card img {
     width: 100%;
-    height: auto;
+    height: 300px;
     object-fit: cover;
     border-bottom: 1px solid #ddd;
 }
 
-/* Contenido del cuerpo de la tarjeta */
 .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
     padding: 16px;
 }
 
-/* Título del producto */
 .card-title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: black;
     margin: 8px 0;
 }
 
-/* Texto descriptivo */
 .card-text {
     font-size: 1rem;
-    color: #666;
+    color: black;
     margin: 8px 0;
 }
 
-/* Precio del producto */
 .card-price {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #28a745;
+    color: mediumseagreen;
     margin: 12px 0;
 }
 
-/* Botón dentro de la tarjeta */
+
 .card-body button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 16px;
+    background-color: darkorange;
+    color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px 12px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
+    align-self: center;
+    margin-top: 16px;
 }
 
 .card-body button:hover {
-    background-color: #0056b3;
+    background-color: aquamarine;
 }
 
-/* Estilo responsivo */
+
+
 @media (max-width: 600px) {
     .card {
         width: 100%;

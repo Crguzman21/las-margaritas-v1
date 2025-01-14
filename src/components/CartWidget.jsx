@@ -4,7 +4,7 @@ import React from 'react';
 function CartWidget(){
     return(
         <>
-            <span className='CartWidget'>🛒0</span>
+            <span className='CartWidget'>🛒1</span>
         </>
     );
 }

@@ -12,7 +12,7 @@ function ItemList(props) {
                 key={item.id}
                 title={item.title}
                 price={item.price}
-                text={item.category}
+                text={item.description}
                 img={item.img}
                 />
             ))}

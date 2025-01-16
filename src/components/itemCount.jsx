@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 
-const ItemCount = ({ stock, initial, onAdd }) => {
-    const [count, setCount] = useState(initial);
+function ItemCount (props) {
+    const [count, setCount] = useState(1);
 
     const handleIncrement = () => {
-    if (count < stock) setCount(count + 1);
+        setCount(count < props.stock ? count + 1 : count);
     };
 
     const handleDecrement = () => {
-    if (count > 1) setCount(count - 1);
-    };
-
-    const handleAddToCart = () => {
-    if (onAdd) onAdd(count);
+        if (count > 1){
+            setCount(count - 1);
+        }
     };
 
 return (
@@ -24,9 +22,6 @@ return (
         <span>{count}</span>
         <button onClick={handleIncrement} style={{ margin: "0 5px" }}>
         ➕
-        </button>
-        <button onClick={handleAddToCart} style={{ margin: "0 5px" }}>
-        Agregar al carrito
         </button>
     </div>
     </>

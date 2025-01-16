@@ -1,3 +1,4 @@
+
 nav {
   background-color: mediumseagreen;
   border: 1px solid black;
@@ -34,11 +35,13 @@ nav ul li a {
   padding: 5px 10px;
   transition: background-color 0.3s, color 0.3s;
   border-radius: 4px;
+
+    &:hover {
+      background-color: aquamarine;
+    }
 }
 
-nav ul li a:hover {
-  background-color: aquamarine;
-}
+
 
 .CartWidget {
   background-color: #fff;
@@ -108,10 +111,13 @@ nav ul li a:hover {
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s;
+
+    &:hover {
+      background-color: aquamarine;
+      transform: translateY(-2px);
+    }
 }
 
-.item-count button:hover {
-  background-color: aquamarine;
-}
+
 
 

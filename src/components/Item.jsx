@@ -1,7 +1,8 @@
 import Button from "./Button";
-import "./item.css";
+import "./Item.css";
+import ItemCount from "./ItemCount";
 function Item(props) {
-    const {price, title, text, img } = props;
+    const {price, title, text, img, stock } = props;
     return (
         <div className="card">
             <img src={img} width="150" height="150" alt="Imagen del Producto" />
@@ -11,6 +12,7 @@ function Item(props) {
                 <div>
                     <p className="card-price">{price}</p>
                 </div>
+                <ItemCount stock={stock}/>
                 <Button>Ver Detalles</Button>
             </div>
         </div>

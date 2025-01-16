@@ -1,21 +1,20 @@
 import { useEffect, useState } from "react";
-import getAsyncData from "../data/getAsyncData";
+import {getAsyncDataById} from "../data/getAsyncData";
+import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
     const [itemInfo, setItemInfo] = useState({})
 
     useEffect ( () => {
         async function getItemData() {
-            const response = await getAsyncData()
-            setItemInfo(response[0])
+            const response = await getAsyncDataById(5)
+            setItemInfo(response)
         }
         getItemData()
     }, [])
 
     console.log(itemInfo);
-    return (
-    <div>ItemDetailContainer</div>
-    )
+    return <ItemDetail {...itemInfo} />
 }
 
 export default ItemDetailContainer

@@ -6,7 +6,7 @@ const products = [
     stock: 100,
     img: 'https://media.surtiplaza.co/dimen/7702552000141.png',
     category: 'Abarrotes',
-    description: 'Bolsa de 1 kg de arroz de la marca Roa, ideal para preparar diferentes platillos.'
+    description: 'Arroz de 1 kg, ideal para preparar diversos platillos con excelente calidad y sabor.'
     },
     {
     id: 2,
@@ -15,7 +15,7 @@ const products = [
     stock: 70,
     img: 'https://www.buyfrescapp.com/wp-content/uploads/2024/12/BOG-CAT004-00004.png',
     category: 'Legumbres',
-    description: 'Bolsa de 1 kg de arroz de la marca Roa, ideal para preparar diferentes platillos.'
+    description: 'Espinaca fresca de 500 g, perfecta para ensaladas y platillos nutritivos.'
     },
     {
     id: 3,    
@@ -24,7 +24,7 @@ const products = [
     stock: 60,
     img: 'https://exitocol.vtexassets.com/arquivos/ids/24066995/Limpido-Regular-3800-ml-127214_b.jpg?v=638588439955800000',
     category: 'Aseo',
-    description: 'Bolsa de 1 kg de arroz de la marca Roa, ideal para preparar diferentes platillos.'
+    description: 'Limpiador de 3800 ml, ideal para una limpieza profunda con aroma fresco.'
     },
     {
     id: 4,
@@ -33,7 +33,7 @@ const products = [
     stock: 120,
     img: 'https://colanta.com/sabe-mas/wp-content/uploads/Tabla-Nutricional-Leche-Entera-Colanta-1000-ml.jpg',
     category: 'Lacteos',
-    description: 'Bolsa de 1 kg de arroz de la marca Roa, ideal para preparar diferentes platillos.'
+    description: 'Leche entera de 1 litro, fresca y nutritiva, ideal para toda la familia.'
     },
     {
     id: 5,    

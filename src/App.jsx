@@ -1,8 +1,8 @@
 import "./App.css";
 import Navbar from "./components/NavBar";
-import ItemCount from "./components/ItemCount";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 
@@ -16,16 +16,17 @@ function App() {
   }
 
   return (
-    <>
-      <Navbar />
-      <div className="saludo">
-        <p>{saludarUsuario()}</p>
-      </div>
-      {/* <ItemListContainer /> */}
-    <section>
-    <ItemDetailContainer/>
-    </section>
-    </>
+      <BrowserRouter>
+        <Navbar />
+        <div className="saludo">
+          <p>{saludarUsuario()}</p>
+        </div>
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
+
   )
 }
 

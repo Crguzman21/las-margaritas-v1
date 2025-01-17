@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 import {getAsyncDataById} from "../data/getAsyncData";
 import ItemDetail from "./ItemDetail";
+import  {useParams} from "react-router-dom";
 
 function ItemDetailContainer() {
-    const [itemInfo, setItemInfo] = useState({})
+    const [product, setProduct] = useState({})
+    const { id } = useParams();
 
     useEffect ( () => {
         async function getItemData() {
-            const response = await getAsyncDataById(5)
-            setItemInfo(response)
+            const response = await getAsyncDataById(id);
+            setProduct(response)
         }
         getItemData()
-    }, [])
+    }, [id]);
 
-    console.log(itemInfo);
-    return <ItemDetail {...itemInfo} />
+    return <ItemDetail {...product} />
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;

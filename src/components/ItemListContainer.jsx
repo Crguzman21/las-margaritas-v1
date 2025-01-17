@@ -1,7 +1,6 @@
 import getAsyncData from "../data/getAsyncData";
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import FlexContainer from "./FlexContainer";
 
 function ItemListContainer(props) {
 

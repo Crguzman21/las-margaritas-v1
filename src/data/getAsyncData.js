@@ -15,17 +15,15 @@ function getAsyncData() {
     return promiseData;
 }
 
-export function getAsyncDataById(id) {
+export function getAsyncDataById(itemID) {
 
-    const promiseData = new Promise((resolve, reject) =>{
-    
-        const error = false;
+    const promiseData = new Promise((resolve) =>{
+
     
         setTimeout(() => {
-            if(error) reject("Error en la conexion");
-                const itemRequested = products.find(item => item.id === id);
-                resolve(itemRequested)
-        }, 2000)
+            const requestedProduct = products.find((item) => item.id === Number(itemID));
+            resolve(requestedProduct);
+        }, 500)
         })
     
         return promiseData;

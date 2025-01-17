@@ -16,4 +16,4 @@ function ItemDetail(props) {
     )
 }
 
-export default ItemDetail
+export default ItemDetail;

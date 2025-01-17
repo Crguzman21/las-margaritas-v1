@@ -15,12 +15,21 @@ function Navbar() {
                     </li>
 
                     <li>
-                        <NavLink to="/item">Detalle</NavLink>
+                        <NavLink to="/category/abarrotes">Abarrotes</NavLink>
                     </li>
-                    <li><a>Abarrotes</a></li>
-                    <li><a>Legumbre</a></li>
-                    <li><a>Lacteos</a></li>
-                    <li><a>Aseo</a></li>
+                    
+                    <li>
+                        <NavLink to="/category/legumbres">Legumbre</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/category/lacteos">Lacteos</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/category/aseo">Aseo</NavLink>
+                    </li>
+
                 </ul>
             <CartWidget />
             </nav>

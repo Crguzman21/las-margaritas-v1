@@ -32,7 +32,7 @@ const products = [
     price: '$ 0.87',
     stock: 120,
     img: 'https://colanta.com/sabe-mas/wp-content/uploads/Tabla-Nutricional-Leche-Entera-Colanta-1000-ml.jpg',
-    category: 'Lácteos',
+    category: 'Lacteos',
     description: 'Bolsa de 1 kg de arroz de la marca Roa, ideal para preparar diferentes platillos.'
     },
     {
@@ -78,7 +78,7 @@ const products = [
     price: '$ 1.79',
     stock: 40,
     img: 'https://colanta.vtexassets.com/arquivos/ids/157100-800-450?v=638110382829430000&width=800&height=450&aspect=true',
-    category: 'Lácteos',
+    category: 'Lacteos',
     description: 'Mantequilla sin sal en presentación pequeña, perfecta para cocinar o untar.'
     },
     {
@@ -115,7 +115,7 @@ const products = [
     price: '$ 0.96',
     stock: 40,
     img: 'https://carulla.vtexassets.com/arquivos/ids/16178135/Yogurt-ALPINA-ORIGINAL-TROZOS-FRUTA-MELOCOTO-240-gr-3568984_a.jpg?v=638544352596830000',
-    category: 'Lácteos',
+    category: 'Lacteos',
     description: 'Yogurt individual de 240 g con trozos de fruta, marca Alpina.'
     },
     {
@@ -133,7 +133,7 @@ const products = [
     price: '$ 2.06',
     stock: 40,
     img: 'https://mercasur.com.co/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTc4MTYxNiwicHVyIjoiYmxvYl9pZCJ9fQ==--06129b0be37e710f7f962d450a91d64ed5f4e5d3/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fZml0IjpbNjAwLDYwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--db42ba722be1e76788976c3dae164d352f833ae3/7702177022344?locale=es',
-    category: 'Lácteos',
+    category: 'Lacteos',
     description: 'Crema de leche espesa para cocinar, en presentación de 400 g.'
     },
 
@@ -161,7 +161,7 @@ const products = [
     price: '$ 2.53',
     stock: 40,
     img: 'https://olimpica.vtexassets.com/arquivos/ids/1423070-800-450?v=638512992608200000&width=800&height=450&aspect=true',
-    category: 'Lácteos',
+    category: 'Lacteos',
     description: 'Queso mozzarella en bloque, ideal para pizzas y pastas.'
     },
     {

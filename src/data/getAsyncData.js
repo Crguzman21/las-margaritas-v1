@@ -28,4 +28,18 @@ export function getAsyncDataById(itemID) {
     
         return promiseData;
     }
+
+export function getAsyncDataByCategory(catID) {
+
+    const promiseData = new Promise((resolve) =>{
+
+    
+        setTimeout(() => {
+            const requestedProduct = products.filter((item) => item.category.toLowerCase() === catID.toLowerCase());
+            resolve(requestedProduct);
+        }, 500)
+        })
+    
+        return promiseData;
+    }
 export default getAsyncData;

@@ -105,7 +105,7 @@ const products = [
     title: 'Crema Dental Colgate Triple Accion 150 ml x 3unidades',
     price: '$ 6.24',
     stock: 60,
-    img: 'https://locatelcolombia.vtexassets.com/arquivos/ids/370055-800-450?v=638483650322730000&width=800&height=450&aspect=true',
+    img: 'https://jumbocolombiaio.vtexassets.com/arquivos/ids/632885-1600-1600?v=638537364182900000&width=1600&height=1600&aspect=true',
     category: 'Aseo',
     description: 'Pack de tres cremas dentales con fórmula de triple acción.'
     },

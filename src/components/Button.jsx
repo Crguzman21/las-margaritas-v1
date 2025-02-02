@@ -1,18 +1,23 @@
-function Button(props) {
-    const {text, color, disabled, children} = props;
+import { useState } from "react";
 
-    let displayText;
-    if(children === undefined) {
-        displayText = text;
-    }else{
-        displayText = children;
-    }
+function Button(props) {
+    const {color, disabled, children} = props;
+
+    const [isDisabled, setIsDisabled] = useState(disabled);
+    const [colorState, setColorState] = useState(color);
 
     return (
-        <button style={{backgroundColor: color}} disabled={disabled}>
-            {displayText}
+        <button
+            onClick={() => {
+                setColorState("orange");
+                setIsDisabled("true");
+            }}
+            style={{ backgroundColor: colorState }}
+            disabled={isDisabled}
+        >
+            {children}
         </button>
-    );
+    )
 }
 
 export default Button;

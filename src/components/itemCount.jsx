@@ -1,29 +1,33 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
 function ItemCount (props) {
     const [count, setCount] = useState(1);
+    const { onSubmitCount } = props;
 
     const handleIncrement = () => {
-        setCount(count < props.stock ? count + 1 : count);
+        if(count === props.max) return;
+        setCount(count + 1);
     };
 
     const handleDecrement = () => {
-        if (count > 1){
-            setCount(count - 1);
-        }
+        setCount(count - 1);
     };
 
 return (
     <>
         <div className='item-count'>
-        <button onClick={handleDecrement} style={{ margin: "0 5px" }}>
-        ➖
-        </button>
-        <span>{count}</span>
-        <button onClick={handleIncrement} style={{ margin: "0 5px" }}>
-        ➕
-        </button>
-    </div>
+            <button onClick={handleDecrement} style={{ margin: "0 5px" }}>
+            ➖
+            </button>
+            <span>{count}</span>
+            <button onClick={handleIncrement} style={{ margin: "0 5px" }}>
+            ➕
+            </button>
+
+            <div>
+                <button onClick={ () =>{props.onSubmitCount(count)}}>Enviar</button>
+            </div>
+        </div> 
     </>
 
 );

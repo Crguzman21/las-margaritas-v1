@@ -1,11 +1,15 @@
 import ItemCount from "./ItemCount";
 import "./ItemDetail.css";
+import { useContext } from 'react';
+import cartContext from '../context/cartContext';
 
 function ItemDetail(props) {
-    const {title, price, description, img, category, stock } = props;
+    const {title, price, description, img, category, stock, id } = props;
+    const { addItem } = useContext(cartContext);
 
     function onSubmitCount(count){
         console.log(`Agregaste ${count} unidades al carrito`);
+        addItem( {id, price, title, count, img} )
     }
     return (
     <div className="item-detail">
@@ -14,12 +18,10 @@ function ItemDetail(props) {
         <p>{category}</p>
         <p>{price}</p>
         <p>{description}</p>
-        <button className="add-to-cart-btn"> Agregar Al Carrito</button>
-
         <div>
             <ItemCount onSubmitCount={onSubmitCount} max={stock}/>
         </div>
-    </div>
+    </div> 
     )
 }
 

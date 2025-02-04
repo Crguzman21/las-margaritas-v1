@@ -1,17 +1,14 @@
 import { useState } from "react";
 
 function Button(props) {
-    const {color, disabled, children} = props;
+    const {color, disabled, children, onClick} = props;
 
     const [isDisabled, setIsDisabled] = useState(disabled);
     const [colorState, setColorState] = useState(color);
 
     return (
         <button
-            onClick={() => {
-                setColorState("orange");
-                setIsDisabled("true");
-            }}
+            onClick={onClick}
             style={{ backgroundColor: colorState }}
             disabled={isDisabled}
         >

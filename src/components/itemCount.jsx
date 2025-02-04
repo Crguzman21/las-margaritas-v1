@@ -25,7 +25,7 @@ return (
             </button>
 
             <div>
-                <button onClick={ () =>{props.onSubmitCount(count)}}>Enviar</button>
+                <button onClick={ () =>{props.onSubmitCount(count)}}>Agregar Al Carrito</button>
             </div>
         </div> 
     </>

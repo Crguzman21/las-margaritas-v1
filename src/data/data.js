@@ -22,7 +22,7 @@ const products = [
     title: 'Limpido x 3800 ml',
     price: '$ 2.06',
     stock: 60,
-    img: 'https://exitocol.vtexassets.com/arquivos/ids/24066995/Limpido-Regular-3800-ml-127214_b.jpg?v=638588439955800000',
+    img: 'https://exitocol.vtexassets.com/arquivos/ids/26698154/Limpido-Regular-3800-ml-127214_a.jpg?v=638742171105500000',
     category: 'Aseo',
     description: 'Limpiador de 3800 ml, ideal para una limpieza profunda con aroma fresco.'
     },

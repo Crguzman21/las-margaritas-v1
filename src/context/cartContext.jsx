@@ -2,10 +2,12 @@ import { createContext, useState } from "react";
 
 const cartContext = createContext( { cartItems: []});
 export function CartContextProvider(props){
-    const [cartItems, setCartItems] = useState([ 
-        {item: 1, count: 20}, 
-        {item: 2, count:4}
-    ]);
+    const [cartItems, setCartItems] = useState( [] );
+
+    function removeItem(id){
+        const newCartState = cartItems.filter((item) => item.id !== id);
+        setCartItems(newCartState);
+    }
 
     function addItem({price, id, title, img, count}){
 
@@ -28,16 +30,17 @@ export function CartContextProvider(props){
         return total;
     }
 
-    return <cartContext.Provider 
+    return( <cartContext.Provider 
             value={{
                 cartItems,
                 countItemsInCart,
                 addItem,
-                name: "Carrito de Compras",
+                removeItem
                 }}
             >
         {props.children}
     </cartContext.Provider>
+    );
 }
 
 export default cartContext;

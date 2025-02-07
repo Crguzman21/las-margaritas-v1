@@ -29,6 +29,9 @@ function Navbar() {
                     <li>
                         <NavLink to="/category/aseo">Aseo</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/cart">Carrito</NavLink>
+                    </li>
 
                 </ul>
             <CartWidget />

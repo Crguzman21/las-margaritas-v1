@@ -1,4 +1,4 @@
-import getAsyncData, { getAsyncDataByCategory } from "../data/getAsyncData";
+import getAsyncData, { getAsyncDataByCategory } from "../data/database";
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
@@ -8,19 +8,22 @@ function ItemListContainer(props) {
     const { catid } = useParams();
 
     useEffect(() => {
-        if (catid !== undefined) {
-            // Obtener productos filtrados por categoría
-            getAsyncDataByCategory(catid)
+        if (catid === undefined) {
+            const respuestaPromise = getAsyncData();
+
+            respuestaPromise
                 .then((respuesta) => setProducts(respuesta))
                 .catch((error) => alert(error));
+
         } else {
-            // Obtener todos los productos
-            getAsyncData()
+            const respuestaPromise = getAsyncDataByCategory(catid);
+
+            respuestaPromise
                 .then((respuesta) => setProducts(respuesta))
                 .catch((error) => alert(error));
         }
-    }, [catid]); // Dependencia para ejecutar el efecto cuando cambie catid
-
+    }, [catid]);
+        
     return (
         <div>
             <ItemList greeting={props.greeting} products={products} />

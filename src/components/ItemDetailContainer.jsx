@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {getAsyncDataById} from "../data/getAsyncData";
+import {getAsyncItemById} from "../data/database";
 import ItemDetail from "./ItemDetail";
 import  {useParams} from "react-router-dom";
 import Loader from "./Loader";
@@ -10,7 +10,7 @@ function ItemDetailContainer() {
 
     useEffect ( () => {
         async function getItemData() {
-            const response = await getAsyncDataById(id);
+            const response = await getAsyncItemById(id);
             setProduct(response)
         }
         getItemData()

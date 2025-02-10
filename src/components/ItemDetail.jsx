@@ -18,7 +18,7 @@ function ItemDetail(props) {
         <h2>{title} </h2>
         <img src={img}  alt={title} />
         <p>{category}</p>
-        <p>{price}</p>
+        <p>$ {price}</p>
         <p>{description}</p>
         <span>Stock: {stock}</span>
         <div>

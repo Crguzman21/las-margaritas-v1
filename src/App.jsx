@@ -24,6 +24,7 @@ function App() {
           <div className="saludo">
             <p>{saludarUsuario()}</p>
           </div>
+
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />

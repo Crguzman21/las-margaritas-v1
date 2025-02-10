@@ -4,6 +4,14 @@ const cartContext = createContext( { cartItems: []});
 export function CartContextProvider(props){
     const [cartItems, setCartItems] = useState( [] );
 
+    function getTotalPrice(){
+        let totalPrice = 0;
+        cartItems.forEach((item) => {
+            totalPrice += item.price * item.count;
+        });
+        return totalPrice;
+    }
+
     function removeItem(id){
         const newCartState = cartItems.filter((item) => item.id !== id);
         setCartItems(newCartState);
@@ -35,7 +43,8 @@ export function CartContextProvider(props){
                 cartItems,
                 countItemsInCart,
                 addItem,
-                removeItem
+                removeItem,
+                getTotalPrice,
                 }}
             >
         {props.children}

@@ -10,14 +10,14 @@ function ItemDetailContainer() {
 
     useEffect ( () => {
         async function getItemData() {
-            const response = await getAsyncItemById(id);
-            setProduct(response)
+            const data = await getAsyncItemById(id);
+            setProduct(data)
         }
         getItemData()
     }, [id]);
 
     if( product  )
-        return <ItemDetail {...product} />
+        return <ItemDetail {...product} id={id} />
 
     else
         return <Loader/>

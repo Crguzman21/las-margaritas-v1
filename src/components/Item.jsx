@@ -12,7 +12,7 @@ function Item(props) {
                 <h3 className="card-title">{title}</h3>
                 <p className="card-text">{description}</p>
                 <div>
-                    <p className="card-price">{price}</p>
+                    <p className="card-price">$ {price}</p>
                 </div>
                 <Link to={`/item/${id}`}>
                     <Button>Ver Detalle</Button>

@@ -116,8 +116,24 @@ nav ul li a {
       transform: translateY(-2px);
     }
 
-
 }
+
+button{
+  padding: 10px 20px;
+  background-color: darkorange;
+  color: black;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+
+      &:hover {
+      background-color: aquamarine;
+      transform: translateY(-2px);
+      }
+}
+
 
 
 

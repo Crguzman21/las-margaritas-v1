@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, doc, getDoc, query, where} from "firebase/firestore";
+import { getFirestore, collection, getDocs, doc, getDoc, query, where, addDoc, setDoc} from "firebase/firestore";
+import products from "./data";
 
 const firebaseConfig = {
     apiKey: "AIzaSyD6ing3_Qm8X1DVs22baEaPfk0nBYEAt6g",
@@ -55,5 +56,53 @@ export async function getAsyncDataByCategory(catID){
     );
     
     return documentsData;
+
+}
+
+
+// ! SOLO PARA TESTING, NO SE DEBEN USAR
+/*export async function createDocument(){
+    const newProductRef = doc(db, "products", "nuevo-id");
+    await setDoc(newProductRef, {    
+    title: 'Limpido x 3800 ml',
+    price: '2.06',
+    stock: 60,
+    img: 'https://exitocol.vtexassets.com/arquivos/ids/26698154/Limpido-Regular-3800-ml-127214_a.jpg?v=638742171105500000',
+    category: 'aseo',
+    description: 'Limpiador de 3800 ml, ideal para una limpieza profunda con aroma fresco.'
+    });
+
+    console.log("Nuevo Documento creado", newDoc);
+
+    
+}
+
+export async function exportProductsToDB(){
+    for(let item of products){
+        delete item.id;
+        const docID = await addDoc(collection(db, "products"), item);
+        console.log("Documento creado", docID.id);
+    }
+}
+
+export async function exportProductsWithBatch(){
+    const batch = writeBatch(db);
+
+    for(let item of products){
+        delete item.id;
+        const itemId = `${item.id}`;
+        const newDoc = doc(db, "products", `item-${itemId}`);
+        batch.set(newDoc, item);
+    }
+
+    const commitRes = await batch.commit();
+}*/
+
+export async function createBuyOrder(orderData){
+    const newOrderDoc = await addDoc(collection(db, "orders",), orderData);
+    return newOrderDoc.id
+}
+
+export async function updateStock(){
 
 }

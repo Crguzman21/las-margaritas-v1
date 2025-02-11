@@ -1,25 +1,30 @@
 
 .cart-container {
     display: flex;
-    flex-direction: column; 
+    flex-direction: row; 
     align-items: center;    
     padding: 20px;
     font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
 
-.cart-container h1 {
-    font-size: 24px;
+h1 {
+    font-size: 38px;
     margin-bottom: 10px;
     color: black; 
+    text-align: center;
 }
 
 .cart-item {
+    margin: 10px;
     border: 1px solid black; 
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 5px; 
-    width: 90%; 
+    width: 300px; 
     max-width: 600px; 
     background-color: white; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -58,3 +63,59 @@
     margin: 15px 0; 
     border-top: 1px solid #eee; 
 }
+
+form {
+    display: flex;
+    flex-direction: column; 
+    width: 90%; 
+    max-width: 500px; 
+    margin: 20px auto; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    background-color: mediumseagreen; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+form h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center; 
+    color: black;
+}
+
+form div {
+    display: flex;
+    margin-bottom: 15px; 
+}
+
+form label {
+    width: 120px; 
+    margin-right: 10px;
+    text-align: left;
+    color: black; 
+}
+
+form input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.order-confirmation {
+    background-color: mediumseagreen;
+    border: none;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.order-confirmation p {
+    margin-bottom: 8px;
+    color: black; 
+    font-size: 24px;
+}
+

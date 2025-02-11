@@ -4,7 +4,6 @@ import cartContext from '../context/cartContext';
 
 function CartWidget(){
     const context = useContext(cartContext);
-    console.log("Context---->",context);
     return(
         <div className='CartWidget'>
             🛒

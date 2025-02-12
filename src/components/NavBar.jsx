@@ -29,12 +29,15 @@ function Navbar() {
                     <li>
                         <NavLink to="/category/aseo">Aseo</NavLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <NavLink to="/cart">Carrito</NavLink>
-                    </li>
+                    </li> */}
 
                 </ul>
-            <CartWidget />
+            <NavLink to="/cart">
+                <CartWidget />
+            </NavLink>
+
             </nav>
         </>
     );

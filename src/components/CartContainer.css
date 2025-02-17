@@ -119,3 +119,8 @@ form input[type="text"] {
     font-size: 24px;
 }
 
+.empty-cart{
+    text-align: center;
+    font-size: 50px;
+}
+

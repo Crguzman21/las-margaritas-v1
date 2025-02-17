@@ -48,17 +48,15 @@ function CartContainer() {
         }
     }
 
-    // Si el carrito está vacío, mostramos un mensaje
     if (cartItems.length === 0) {
         return (
             <>
                 <h1>Carrito de Compras</h1>
-                <p>Tu carrito está vacío. Agrega productos para continuar con la compra.</p>
+                <p className="empty-cart">Tu carrito está vacío. Agrega productos para continuar con la compra.</p>
             </>
         );
     }
 
-    // Si el carrito tiene productos y no se ha hecho la compra aún
     if (!orderId) {
         return (
             <>
